@@ -1,0 +1,11 @@
+p{
+    color: blue;
+    border:2px solid blue;
+    box-shadow: 1px 1px 2px 1px gray;
+    
+}
+p:hover{
+    scale: 1.05;
+    cursor: pointer;
+
+}
