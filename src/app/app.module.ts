@@ -10,12 +10,16 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { FormsModule } from '@angular/forms';
+import { AssignmentComponent } from './assignment/assignment.component';
+import { Assignment2Component } from './assignment2/assignment2.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FirstComponent,
     DatepickerOverviewExample,
+    AssignmentComponent,
+    Assignment2Component,
   ],
   imports: [
     BrowserModule,

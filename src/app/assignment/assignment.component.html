@@ -1,0 +1,5 @@
+<input type="text" (input)="getUsername($event)" placeholder="EnterUser">
+<input type="password" (input)="getpassword($event)" >
+<button (click)="btnclick($event)" class="btn btn-primary" id="submit" [disabled]="!disablesubmitbtn">
+    {{btname}}
+</button>

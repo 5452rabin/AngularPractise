@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+getdata($event: any) {
+throw new Error('Method not implemented.');
+}
   title = 'eccom';
 }
