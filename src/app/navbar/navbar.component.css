@@ -1,0 +1,10 @@
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+.space{
+    flex:1 1 auto;
+}
+a:hover{
+    transform: scale(1.2);
+    color: crimson;
+    text-shadow: 1px;
+    text-align: end;
+}

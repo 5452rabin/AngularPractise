@@ -10,8 +10,11 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { FormsModule } from '@angular/forms';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatButtonModule} from '@angular/material/button';
 import { AssignmentComponent } from './assignment/assignment.component';
 import { Assignment2Component } from './assignment2/assignment2.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +23,7 @@ import { Assignment2Component } from './assignment2/assignment2.component';
     DatepickerOverviewExample,
     AssignmentComponent,
     Assignment2Component,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,7 +31,9 @@ import { Assignment2Component } from './assignment2/assignment2.component';
     MatFormFieldModule, 
     MatInputModule, 
     MatDatepickerModule,
-    FormsModule
+    FormsModule,
+    MatToolbarModule,
+    MatButtonModule
   ],
   providers: [
     provideAnimationsAsync()
