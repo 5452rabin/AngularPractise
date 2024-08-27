@@ -15,7 +15,10 @@ import {MatButtonModule} from '@angular/material/button';
 import { AssignmentComponent } from './assignment/assignment.component';
 import { Assignment2Component } from './assignment2/assignment2.component';
 import { NavbarComponent } from './navbar/navbar.component';
-
+import {MatIconModule} from '@angular/material/icon';
+import { HomeComponent } from './home/home.component';
+import { CardComponent } from './card/card.component';
+import {MatCardModule} from '@angular/material/card';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +27,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     AssignmentComponent,
     Assignment2Component,
     NavbarComponent,
+    HomeComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +38,9 @@ import { NavbarComponent } from './navbar/navbar.component';
     MatDatepickerModule,
     FormsModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    MatIconModule,
+    MatCardModule
   ],
   providers: [
     provideAnimationsAsync()
