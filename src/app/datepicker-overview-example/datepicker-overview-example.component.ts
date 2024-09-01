@@ -16,7 +16,7 @@ import {provideNativeDateAdapter} from '@angular/material/core';
 export class DatepickerOverviewExample {
 
   selectedDate: Date | null = null;
-  getdate(event:any):Date{
+  getdate(event:Event):Date{
     console.log(this.selectedDate);
     return this.selectedDate;
   }

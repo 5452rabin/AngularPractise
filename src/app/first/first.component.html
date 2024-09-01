@@ -1,5 +1,6 @@
-<div class="d-flex justify-content-center mt-3" >
-   <app-datepicker></app-datepicker>
+<div class="d-flex justify-content-center mt-3 flex-wrap" >
+   <app-datepicker (click)="callgetdata($event)"></app-datepicker>
+   <!-- <button (click)="callgetdata($event)">submit</button> -->
    <h1>the date is {{res}}</h1>
   </div>
   

@@ -1,20 +1,18 @@
 
-<div class="w-100 justify-between-center">
-  <mat-card appearance="outlined" class="shadowcard card ">
+<div (click)="popup(product.id)" id="${{product.id}}">
+  <mat-card appearance="outlined" class="shadowcard card w-100  mt-2" >
     <mat-card-header>
-      <div mat-card-avatar class="example-header-image">
-      </div>
-      <mat-card-title class="gap-2">I{{product.title}}</mat-card-title>
- 
-    
-   
+      
+      <mat-card-title style="text-size-adjust: 25px;">
+        <p>{{product.title.slice(0,20)}}</p>
+      </mat-card-title>
     </mat-card-header>
-    <div class="w-100">
-      <img class="justify-item-center" [width]="200" height="200" mat-card-image src={{product.image}} alt="Photo of a Shiba Inu">
+    <div class="align-self-center">
+      <img class="" [width]="150" height="150" mat-card-image [src]="product.image" alt="{{product.title}}">
     </div>
     <mat-card-content>
       <p>
-       {{product.description.slice(0,150)}}....<a href="#">ShowMore</a>
+        {{product.description.slice(0,75)}}... <a href="#">Show More</a>
       </p>
     </mat-card-content>
     <mat-card-actions>
@@ -22,8 +20,8 @@
       <button mat-button>SHARE</button>
     </mat-card-actions>
     <mat-card-footer>
-      <mat-icon class="d-flex justify-content-end">local_offer</mat-icon>
-      {{product.price}}
+      <mat-icon>local_offer</mat-icon>
+      ${{product.price}}
     </mat-card-footer>
   </mat-card>
 </div>

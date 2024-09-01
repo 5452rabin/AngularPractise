@@ -37,4 +37,8 @@ export class ProductsService {
     return this.productList;
 
   }
+  getproduct(productid:number):Product
+  {
+    return this.productList.find(x=>x.id==productid);
+  }
 }

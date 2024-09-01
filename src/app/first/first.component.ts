@@ -8,8 +8,8 @@ import {DatepickerOverviewExample} from '../datepicker-overview-example/datepick
 export class FirstComponent  {
   res: Date | null = null;
   @ViewChild(DatepickerOverviewExample) Datepicker!:DatepickerOverviewExample
-  callgetdata(){
-    this.res=this.Datepicker.selectedDate;
+  callgetdata(event:Event){
+    this.res=this.Datepicker.getdate(event);
     console.log("hi"+this.res);
     
   }
