@@ -10,6 +10,7 @@
         </div>
     </div>
 </div>
+
 <div *ngIf="enablepopup">
     <div class="popup active" (click)="popdown()">
         <div class="popup-content" (click)="$event.stopPropagation()">
@@ -26,12 +27,23 @@
                     <img [src]=popupproduct.image [width]="200" height="auto">
                 </div>
                 <div class="descriptionfeild">
-                    {{popupproduct.description}}
+                    <p class="text-right">
+                        
+                        {{popupproduct.description.slice(0,500)}}
+                    </p>
                 </div>
             </div>
-            <div class="popup-footer border border-dark">
-
+            <div class="popup-footer d-flex flex-wrap justify-content-between align-items-center p-3">
+                <div class="btn btn-primary d-flex align-items-center mb-2">
+                    <mat-icon color="success" class="me-2">shopping_cart</mat-icon>
+                    Add To Cart
+                </div>
+                <div class="btn btn-info d-flex align-items-center mb-2">
+                    <mat-icon class="me-2">money</mat-icon>
+                    Enquiry Price
+                </div>
             </div>
+            
         </div>
     </div>
 </div>

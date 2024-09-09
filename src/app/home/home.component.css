@@ -44,6 +44,7 @@
 .popup-body .descriptionfeild {
     font-size: 1em;
     color: #555;
+    text-justify: inter-word;
 }
 
 .popup-footer {
