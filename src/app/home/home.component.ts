@@ -9,6 +9,8 @@ import { Product } from '../shared/model/product';
 export class HomeComponent {
 productlist:Array<{name:string,price:number}>;
 productList1:Array<Product>=[];
+popupproduct:Product =null;
+enablepopup:boolean=false;
 constructor(private productservice:ProductsService){}
 ngOnInit():void
 {
@@ -20,4 +22,14 @@ loadProducts(): void {
   this.productList1=this.productservice.getproducts();
   
 }
+popup(product:Product){
+this.popupproduct=product;
+this.enablepopup=true;
+console.log(this.popupproduct);
+
+}
+popdown(){
+this.enablepopup=false;
+}
+
 }

@@ -3,7 +3,35 @@
 <div class="container" style="background: aliceblue;">
     <div class="row">
         <div class="col-sm-6 col-md-4 col-lg-3" *ngFor="let product of productList1">
-            <app-card [product]="product"></app-card>
+            <div (click)="popup(product)">
+
+                <app-card [product]="product"></app-card>
+            </div>
+        </div>
+    </div>
+</div>
+<div *ngIf="enablepopup">
+    <div class="popup active" (click)="popdown()">
+        <div class="popup-content" (click)="$event.stopPropagation()">
+            <div class="d-flex">
+                <div class="btn ml-auto" (click)="popdown()">
+                  <mat-icon>close</mat-icon>
+                </div>
+              </div>
+            <div class="popup-header">
+                    {{popupproduct.title}}
+            </div>
+            <div class="popup-body">
+                <div class="imagefeild">
+                    <img [src]=popupproduct.image [width]="200" height="auto">
+                </div>
+                <div class="descriptionfeild">
+                    {{popupproduct.description}}
+                </div>
+            </div>
+            <div class="popup-footer border border-dark">
+
+            </div>
         </div>
     </div>
 </div>
