@@ -19,6 +19,11 @@ import {MatIconModule} from '@angular/material/icon';
 import { HomeComponent } from './home/home.component';
 import { CardComponent } from './card/card.component';
 import {MatCardModule} from '@angular/material/card';
+import { UploadImageComponent } from './upload-image/upload-image.component';
+import {AngularFireModule} from '@angular/fire/compat';
+import {AngularFireStorageModule} from '@angular/fire/compat/storage';
+import { environment } from '../Environment/environment';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +33,8 @@ import {MatCardModule} from '@angular/material/card';
     Assignment2Component,
     NavbarComponent,
     HomeComponent,
-    CardComponent
+    CardComponent,
+    UploadImageComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +47,9 @@ import {MatCardModule} from '@angular/material/card';
     MatButtonModule,
     MatIconModule,
     MatCardModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireStorageModule
   ],
   providers: [
     provideAnimationsAsync()
