@@ -7,7 +7,8 @@ import { AngularFireStorage, AngularFireStorageModule } from '@angular/fire/comp
 })
 export class UploadImageComponent {
 
-
+  imagepresent:boolean=false;
+  imgsrc:string;
   constructor(private firebasestorage:AngularFireStorage){}
   async onfilechange(event:any)
   {
@@ -17,6 +18,8 @@ export class UploadImageComponent {
       const path=`ctp/${file.name}`;
       const uploadtask= await this.firebasestorage.upload(path,file);
       const url= await uploadtask.ref.getDownloadURL();
+      this.imgsrc=url;
+      this.imagepresent=true
       console.log(url);
       
 
