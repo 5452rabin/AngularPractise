@@ -1,7 +1,14 @@
 
 
 <div class="container" style="background: aliceblue;">
-    <div class="row">
+    <div class="row h-50">
+       
+            <div >
+                <app-category-card></app-category-card>
+            </div>
+        
+    </div>
+    <div class="row " style="margin-top: 30%;">
         <div class="col-sm-6 col-md-4 col-lg-3" *ngFor="let product of productList1">
             <div (click)="popup(product)">
 

@@ -23,6 +23,8 @@ import { UploadImageComponent } from './upload-image/upload-image.component';
 import {AngularFireModule} from '@angular/fire/compat';
 import {AngularFireStorageModule} from '@angular/fire/compat/storage';
 import { environment } from '../Environment/environment';
+import { CategoriesComponent } from './categories/categories.component';
+import { CategoryCardComponent } from './category-card/category-card.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { environment } from '../Environment/environment';
     NavbarComponent,
     HomeComponent,
     CardComponent,
-    UploadImageComponent
+    UploadImageComponent,
+    CategoriesComponent,
+    CategoryCardComponent
   ],
   imports: [
     BrowserModule,

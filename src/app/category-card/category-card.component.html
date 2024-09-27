@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="carousel">
+      <div 
+        class="carousel__face" 
+        *ngFor="let item of categoryList; let i = index" 
+        [style.backgroundImage]="'url(' + item.image + ')'"
+        [style.transform]="'rotateY(' + (i * 40) + 'deg) translateZ(430px)'"
+      >
+        
+      </div>
+    </div>
+  </div>
+  

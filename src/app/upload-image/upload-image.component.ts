@@ -16,11 +16,12 @@ export class UploadImageComponent {
     if(file)
     {
       const path=`ctp/${file.name}`;
-      const uploadtask= await this.firebasestorage.upload(path,file);
-      const url= await uploadtask.ref.getDownloadURL();
-      this.imgsrc=url;
-      this.imagepresent=true
-      console.log(url);
+      console.log(file);
+      
+      // const uploadtask= await this.firebasestorage.upload(path,file);
+      // const url= await uploadtask.ref.getDownloadURL();
+      this.imgsrc=file;
+      this.imagepresent=true;
       
 
     }
