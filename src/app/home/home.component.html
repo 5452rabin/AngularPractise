@@ -1,6 +1,6 @@
 
 
-<div class="container" style="background: aliceblue;">
+<div class="container" style="background: rgb(255, 247, 207);">
     <div class="row h-50">
        
             <div >
@@ -9,14 +9,35 @@
         
     </div>
     <div class="row " style="margin-top: 30%;">
-        <div class="col-sm-6 col-md-4 col-lg-3" *ngFor="let product of productList1">
-            <div (click)="popup(product)">
 
-                <app-card [product]="product"></app-card>
-            </div>
+      <div class="w-100" style="    margin-left: 72%;
+    margin-bottom: 7%;">
+        <app-search (searchChanged)="onSearchTermChange($event)"></app-search>
+          
         </div>
+  
+        <ng-container *ngIf="filterproduct() !== null && filterproduct().length > 0">
+            <div class="col-sm-6 col-md-4 col-lg-3" *ngFor="let product of filterproduct()">
+              <div (click)="poppup(product)">
+                <app-card [product]="product"></app-card>
+              </div>
+            </div>
+          </ng-container>
+          
+          <ng-container *ngIf="filterproduct().length == 0">
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <h2>No product name: {{searchterm}}</h2>
+            </div>
+          </ng-container>
+     
+
+        
+            
+        
+       
+        
     </div>
-</div>
+
 
 <div *ngIf="enablepopup">
     <div class="popup active" (click)="popdown()">

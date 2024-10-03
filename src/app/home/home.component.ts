@@ -9,20 +9,22 @@ import { Category } from '../shared/model/category';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-productlist:Array<{name:string,price:number}>;
+
 productList1:Array<Product>=[];
-categoryList:Array<Category>=[];
+productList:Array<Product>=[];
+searchterm:string='';
+issearchemppty:boolean=true;
 popupproduct:Product =null;
 enablepopup:boolean=false;
-constructor(private productservice:ProductsService,private categoryService:CategoryService){}
+p: number = 1;
+
+constructor(private productservice:ProductsService){}
 ngOnInit():void
 {
 this.loadProducts();
-this.loadcategory();
+
 }
-loadcategory():void{
-  this.categoryList=this.categoryService.getcategory();
-}
+
 loadProducts(): void {
   // Data insertion can be done here
     
@@ -38,5 +40,21 @@ console.log(this.popupproduct);
 popdown(){
 this.enablepopup=false;
 }
+filterproduct():Array<Product>
+{
+  if (!this.searchterm) {
+    this.issearchemppty=false;
+    return this.productList1;
+  }
+  this.productList=this.productList1.filter(p=>p.title.toLowerCase().includes(this.searchterm.toLowerCase()));
+  if(this.productList==null)
+  {
+    this.issearchemppty=true;
+  }
+  return this.productList;
 
+}
+onSearchTermChange(term:string):void{
+  this.searchterm=term;
+}
 }
