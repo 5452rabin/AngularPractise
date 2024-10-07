@@ -18,7 +18,7 @@
   
         <ng-container *ngIf="filterproduct() !== null && filterproduct().length > 0">
             <div class="col-sm-6 col-md-4 col-lg-3" *ngFor="let product of filterproduct()">
-              <div (click)="poppup(product)">
+              <div (click)="popup(product)">
                 <app-card [product]="product"></app-card>
               </div>
             </div>

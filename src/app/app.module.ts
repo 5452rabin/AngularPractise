@@ -25,8 +25,9 @@ import {AngularFireStorageModule} from '@angular/fire/compat/storage';
 import { environment } from '../Environment/environment';
 import { CategoriesComponent } from './categories/categories.component';
 import { CategoryCardComponent } from './category-card/category-card.component';
-import { NgxPaginationModule } from 'ngx-pagination';
 import { SearchComponent } from './search/search.component';
+import { FooterComponent } from './footer/footer.component';
+import { BillEstimationComponent } from './bill-estimation/bill-estimation.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,9 @@ import { SearchComponent } from './search/search.component';
     UploadImageComponent,
     CategoriesComponent,
     CategoryCardComponent,
-    SearchComponent
+    SearchComponent,
+    FooterComponent,
+    BillEstimationComponent
    
   ],
   imports: [
@@ -57,8 +60,7 @@ import { SearchComponent } from './search/search.component';
     MatCardModule,
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireStorageModule,
-    NgxPaginationModule
+    AngularFireStorageModule
   ],
   providers: [
     provideAnimationsAsync()
